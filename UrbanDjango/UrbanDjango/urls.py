@@ -16,12 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from example1.views import index,third_task, index1
+#from example1.views import index,third_task, index1
+from task4.views import index, third_task, index1, menu
 from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', third_task),
-    path('index/', index.as_view()),
+    path('index/', index),
     path('index1/', index1.as_view()),
+    path('menu/', menu.as_view()),
 ]

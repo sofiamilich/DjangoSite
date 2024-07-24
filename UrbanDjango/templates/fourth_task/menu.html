@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню</title>
+</head>
+<body>
+    <h1>
+        {% block pagename %}
+        <p>Меню</p>
+        {% endblock %}
+    </h1>
+
+    <menu>
+        {% block menu %}
+        <ul>
+            <a href="#"><p align="left"> {{link1}} </p></a href>
+            <a href="http://127.0.0.1:8000/index/"><p align="left"> {{link2}} </p></a href>
+            <a href="http://127.0.0.1:8000/index1/"><p align="left"> {{link3}} </p></a href>
+        </ul>
+        {% endblock %}
+    </menu>
+
+
+
+    <nav>
+        {% block navigation %}
+        <ul>
+            {% for i in list %}
+                <li>{{i}}<button><a href="#">Купить</a></button></li>
+            {% endfor %}
+        </ul>
+        {% endblock %}
+    </nav>
+
+
+    <main>
+        {% block content %}
+            <p> Посты </p>
+        {% endblock %}
+    </main>
+
+    <footer>
+        {% block footer %}
+            <p>Приходите еще</p>
+        {% endblock %}
+    </footer>
+
+</body>
+</html>

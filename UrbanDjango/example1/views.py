@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-def third_task(request):  # По умолчанию все функции принимают запрос от польз-ля на получение информации и страницы
+#def third_task(request):  # По умолчанию все функции принимают запрос от польз-ля на получение информации и страницы
 
     title = 'имя сайта'
     h1 = 'Главная страница'
@@ -15,7 +15,7 @@ def third_task(request):  # По умолчанию все функции при
         'link3':link3,
     }
     # возвращает функцию render, импортированную по умолчанию в django
-    return render(request, 'third_task.html', context)
+    #return render(request, 'fourth_task/third_task.html', context)
 
 # Создадим вторую страницу при помощи класса наследуемого:
 class index(TemplateView):
