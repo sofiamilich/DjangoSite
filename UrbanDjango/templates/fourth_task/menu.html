@@ -5,21 +5,21 @@
     <title>Меню</title>
 </head>
 <body>
-    <h1>
+    <header>
         {% block pagename %}
-        <p>Меню</p>
+            <h1>Меню</h1>
         {% endblock %}
-    </h1>
+    </header>
 
-    <menu>
+    <nav>
         {% block menu %}
-        <ul>
-            <a href="#"><p align="left"> {{link1}} </p></a href>
-            <a href="http://127.0.0.1:8000/index/"><p align="left"> {{link2}} </p></a href>
-            <a href="http://127.0.0.1:8000/index1/"><p align="left"> {{link3}} </p></a href>
-        </ul>
+            <ul>
+                <li><a href="#">{{link1}}</a></li>
+                <li><a href="http://127.0.0.1:8000/index/">{{link2}}</a></li>
+                <li><a href="http://127.0.0.1:8000/index1/">{{link3}}</a></li>
+            </ul>
         {% endblock %}
-    </menu>
+    </nav>
 
 
 
@@ -27,7 +27,7 @@
         {% block navigation %}
         <ul>
             {% for i in list %}
-                <li>{{i}}<button><a href="#">Купить</a></button></li>
+            <li>{{i}}<button><a href="#">Купить</a></button></li>
             {% endfor %}
         </ul>
         {% endblock %}

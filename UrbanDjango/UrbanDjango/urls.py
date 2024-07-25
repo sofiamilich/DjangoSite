@@ -24,6 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', third_task),
     path('index/', index),
-    path('index1/', index1.as_view()),
-    path('menu/', menu.as_view()),
+    path('index1/', index1),
+    path('menu/', menu),
 ]
