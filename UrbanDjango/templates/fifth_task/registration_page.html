@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+</head>
+<body>
+    <h1>Registration</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {% if form.errors %}
+            <div>
+                <p>{{ form.error }}</p>
+            </div>
+        {% endif %}
+        <div>
+            <label for="id_username">Username:</label>
+            {{ form.username }}
+        </div>
+        <div>
+            <label for="id_password">Password:</label>
+            {{ form.password }}
+        </div>
+        <div>
+            <label for="id_repeat_password">Repeat Password:</label>
+            {{ form.repeat_password }}
+        </div>
+        <div>
+            <label for="id_age">Age:</label>
+            {{ form.age }}
+        </div>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
